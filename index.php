@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Woo Coupon for Highest Priced Item
- * Plugin URI: n/a
+ * Plugin Name: WC Coupon for Highest Priced Item
+ * Plugin URI: https://github.com/pilotkid/wp-coupon-highest-priced-item
  * Description: This plugin adds a new coupon type that allows you to take a percentage off the highest priced item in a user's cart.
  * Version: 1.0.0
  * Author: Marcello Bachechi
@@ -36,9 +36,10 @@ function mb_init() {
 
 // LOAD DEPENDENCIES FOR BACKEND - IF WORDPRESS IS INSTALLED
 add_action( 'admin_init', 'mb_admin_init' );
-function the_dramatist_fire_on_wp_initialization2() {
-    if(is_woocommerce_activated())
+function mb_admin_init() {
+    if(is_woocommerce_activated()){
         include_once(plugin_dir_path(__FILE__).'/KoFi.php');
+    }
 }
 
 // IF WORDPRESS IS NOT INSTALLED THROW A GOOD 'OL ERROR
