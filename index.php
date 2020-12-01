@@ -8,19 +8,16 @@
  * Author URI: https://marcellobachechi.dev
  * Requires at least: 5.3
  * Requires PHP: 7.0
+ * Tested up to: 5.5.3
  * WC requires at least: 3.0
  * WC tested up to: 4.7.1
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! defined( 'WC_PLUGIN_FILE' ) ) {
-	define( 'WC_PLUGIN_FILE', __FILE__ );
-}
-
 // ADD FUNCTION TO CHECK IF WOOCOMMERCE IS ACTIVE - ANOTHER PLUGIN MAY HAVE ALREADY USED THIS BOILERPLATE CODE THEREFORE IT WILL ONLY BE ADDED AS A FUNCTION IF IT IS NOT DETECTED
-if ( ! function_exists( 'is_woocommerce_activated' ) ) {
-	function is_woocommerce_activated() {
+if ( ! function_exists( 'mb_wcchpi_is_woocommerce_activated' ) ) {
+	function mb_wcchpi_is_woocommerce_activated() {
 		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
 	}
 }
@@ -28,7 +25,7 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 // LOAD DEPENDENCIES FOR FRONTEND - IF WORDPRESS IS INSTALLED
 add_action( 'init', 'mb_wcchpi_init' );
 function mb_wcchpi_init() {
-    if(is_woocommerce_activated())
+    if(mb_wcchpi_is_woocommerce_activated())
     {
         include_once(plugin_dir_path(__FILE__).'/ApplyDiscount.php');
         include_once(plugin_dir_path(__FILE__).'/RegisterCoupon.php');
@@ -39,7 +36,7 @@ function mb_wcchpi_init() {
 // LOAD DEPENDENCIES FOR BACKEND - IF WORDPRESS IS INSTALLED
 add_action( 'admin_init', 'mb_wcchpi_admin_init' );
 function mb_wcchpi_admin_init() {
-    if(is_woocommerce_activated()){
+    if(mb_wcchpi_is_woocommerce_activated()){
         include_once(plugin_dir_path(__FILE__).'/KoFi.php');
     }
 }
@@ -49,7 +46,7 @@ add_action( 'admin_notices', 'mb_wcchpi_error_check' );
 function mb_wcchpi_error_check()
 {
     //IF WORDPRESS IS ACTIVE DO NOT THROW AN ERROR
-    if(is_woocommerce_activated()) return;
+    if(mb_wcchpi_is_woocommerce_activated()) return;
 
     //OTHERWISE THROW THAT ERROR
     $class = 'notice notice-error';
