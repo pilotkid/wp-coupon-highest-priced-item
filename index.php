@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WC Coupon for Highest Priced Item
+ * Plugin Name: Coupon for Highest Priced Item for WooCommerce
  * Plugin URI: https://github.com/pilotkid/wp-coupon-highest-priced-item
  * Description: This plugin adds a new coupon type that allows you to take a percentage off the highest priced item in a user's cart.
  * Version: 1.0.0
@@ -8,6 +8,8 @@
  * Author URI: https://marcellobachechi.dev
  * Requires at least: 5.3
  * Requires PHP: 7.0
+ * WC requires at least: 3.0
+ * WC tested up to: 4.7.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -16,7 +18,7 @@ if ( ! defined( 'WC_PLUGIN_FILE' ) ) {
 	define( 'WC_PLUGIN_FILE', __FILE__ );
 }
 
-// ADD FUNCTION TO CHECK IF WOOCOMMERCE IS ACTIVE
+// ADD FUNCTION TO CHECK IF WOOCOMMERCE IS ACTIVE - ANOTHER PLUGIN MAY HAVE ALREADY USED THIS BOILERPLATE CODE THEREFORE IT WILL ONLY BE ADDED AS A FUNCTION IF IT IS NOT DETECTED
 if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 	function is_woocommerce_activated() {
 		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
@@ -24,8 +26,8 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 }
 
 // LOAD DEPENDENCIES FOR FRONTEND - IF WORDPRESS IS INSTALLED
-add_action( 'init', 'mb_init' );
-function mb_init() {
+add_action( 'init', 'mb_wcchpi_init' );
+function mb_wcchpi_init() {
     if(is_woocommerce_activated())
     {
         include_once(plugin_dir_path(__FILE__).'/ApplyDiscount.php');
@@ -35,16 +37,16 @@ function mb_init() {
 }
 
 // LOAD DEPENDENCIES FOR BACKEND - IF WORDPRESS IS INSTALLED
-add_action( 'admin_init', 'mb_admin_init' );
-function mb_admin_init() {
+add_action( 'admin_init', 'mb_wcchpi_admin_init' );
+function mb_wcchpi_admin_init() {
     if(is_woocommerce_activated()){
         include_once(plugin_dir_path(__FILE__).'/KoFi.php');
     }
 }
 
 // IF WORDPRESS IS NOT INSTALLED THROW A GOOD 'OL ERROR
-add_action( 'admin_notices', 'mb_error_check' );
-function mb_error_check()
+add_action( 'admin_notices', 'mb_wcchpi_error_check' );
+function mb_wcchpi_error_check()
 {
     //IF WORDPRESS IS ACTIVE DO NOT THROW AN ERROR
     if(is_woocommerce_activated()) return;

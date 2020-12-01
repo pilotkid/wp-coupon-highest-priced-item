@@ -2,12 +2,12 @@
 Contributors: pilotkid2011 (Marcello Bachechi)
 Donate link: https://ko-fi.com/P5P22RTZ6
 Tags: woocommerce, coupons, discounts
-Requires at least: 5.3
+Requires at least: 5.0
 Requires PHP: 7.0
 Stable tag: 4.3
+Tested up to: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
 == Description ==
 
 This plugin allows you to create a coupon that will apply a percentage based coupon to the highest priced item in a user's cart.

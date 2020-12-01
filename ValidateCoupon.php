@@ -2,7 +2,7 @@
 // ADD VALIDATION METHOD TO NEW COUPON TYPE - https://stackoverflow.com/a/35069213/2073738
 add_filter('woocommerce_coupon_is_valid_for_product', 'woocommerce_coupon_is_valid_for_product', 10, 4);
 function woocommerce_coupon_is_valid_for_product($valid, $product, $coupon, $values){
-    if ( ! $coupon->is_type( array( 'mb_most_expensive_coupon' ) ) ) {
+    if ( ! $coupon->is_type( array( 'mb_wcchpi_most_expensive_coupon' ) ) ) {
         return $valid;
     }
 
