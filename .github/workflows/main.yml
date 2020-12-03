@@ -15,6 +15,9 @@ jobs:
       with:
         generate-zip: true
       env:
+        SLUG: wc-coupon-for-highest-priced-item
+        README_NAME: readme.md
+        ASSETS_DIR: assets
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
     - name: Upload release asset
