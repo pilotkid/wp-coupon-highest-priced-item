@@ -33,6 +33,9 @@ This plugin allows you to create a coupon that will apply a percentage based cou
 - I am a developer, can I contribute?
   - There is a github page here: https://github.com/pilotkid/wp-coupon-highest-priced-item
 
+- How can I disable the Ko-Fi donate button?
+  - If you look under Settings->General there is an option to hide the Ko-Fi message
+
 == Screenshots ==
 1. Shows the discount being applied. $55 is the most expensive item. With a 20% off coupon the total discount would be $11.
 2. This is the setup screen under the normal woocommerce setup page.
