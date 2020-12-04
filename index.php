@@ -15,6 +15,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+include_once(plugin_dir_path(__FILE__).'/settings-page.php');
+
 // ADD FUNCTION TO CHECK IF WOOCOMMERCE IS ACTIVE - ANOTHER PLUGIN MAY HAVE ALREADY USED THIS BOILERPLATE CODE THEREFORE IT WILL ONLY BE ADDED AS A FUNCTION IF IT IS NOT DETECTED
 if ( ! function_exists( 'mb_wcchpi_is_woocommerce_activated' ) ) {
 	function mb_wcchpi_is_woocommerce_activated() {
