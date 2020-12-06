@@ -21,20 +21,32 @@ This plugin allows you to create a coupon that will apply a percentage based cou
 - Are there any requirements
   - Yes, woocommerce is required for this plugin to work.
 
+
+
 - The coupon is off by a few cents sometimes
   - This can happen if there is a total that cannot be divided evenly by the number of products in the cart. There is no way around this, sadly it is a math issue.
+
+
 
 - Where do I find the setup page?
   - Exactly where coupons normally are, Admin -> Marketing -> Coupons
 
+
+
 - Can I donate?
-  - Yes, I have a ko-fi page here https://ko-fi.com/P5P22RTZ6. I would greatly appreciate it being a college student :)
+  - Yes, I have a ko-fi page here [https://ko-fi.com/P5P22RTZ6](https://ko-fi.com/P5P22RTZ6). I would greatly appreciate it being a college student :)
+
+
 
 - I am a developer, can I contribute?
   - There is a github page here: https://github.com/pilotkid/wp-coupon-highest-priced-item
 
+
+
 - How can I disable the Ko-Fi donate button?
   - If you look under Settings->General there is an option to hide the Ko-Fi message
+
+
 
 == Screenshots ==
 1. Shows the discount being applied. $55 is the most expensive item. With a 20% off coupon the total discount would be $11.
@@ -44,3 +56,9 @@ This plugin allows you to create a coupon that will apply a percentage based cou
 
 = 1.0 =
 * Initial Release
+
+= 1.0.1 =
+* Added remove Kofi message setting
+
+= 1.0.2 =
+* Bug fix
