@@ -62,3 +62,6 @@ This plugin allows you to create a coupon that will apply a percentage based cou
 
 = 1.0.2 =
 * Bug fix
+
+= 1.0.2 =
+* I did not save the file with the bug fix for 1.0.2. So it did not get published.
