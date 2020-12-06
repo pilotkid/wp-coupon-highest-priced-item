@@ -39,7 +39,7 @@ This plugin allows you to create a coupon that will apply a percentage based cou
 
 
 - I am a developer, can I contribute?
-  - There is a github page here: https://github.com/pilotkid/wp-coupon-highest-priced-item
+  - There is a github page here: [https://github.com/pilotkid/wp-coupon-highest-priced-item](https://github.com/pilotkid/wp-coupon-highest-priced-item)
 
 
 
