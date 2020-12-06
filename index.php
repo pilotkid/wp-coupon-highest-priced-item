@@ -24,14 +24,16 @@ if ( ! function_exists( 'mb_wcchpi_is_woocommerce_activated' ) ) {
 	}
 }
 
+include_once(plugin_dir_path(__FILE__).'ApplyDiscount.php');
+include_once(plugin_dir_path(__FILE__).'RegisterCoupon.php');
+include_once(plugin_dir_path(__FILE__).'ValidateCoupon.php');
+
 // LOAD DEPENDENCIES FOR FRONTEND - IF WORDPRESS IS INSTALLED
 add_action( 'init', 'mb_wcchpi_init' );
 function mb_wcchpi_init() {
     if(mb_wcchpi_is_woocommerce_activated())
     {
-        include_once(plugin_dir_path(__FILE__).'ApplyDiscount.php');
-        include_once(plugin_dir_path(__FILE__).'RegisterCoupon.php');
-        include_once(plugin_dir_path(__FILE__).'ValidateCoupon.php');
+
     }
 }
 

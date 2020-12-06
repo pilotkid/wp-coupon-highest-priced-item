@@ -23,7 +23,7 @@ function mb_wcchpi_cpn_disc($discount, $discounting_amount, $cart_item, $single,
 		$itemCount = WC()->cart->cart_contents_count;
 
 		//GET THE DISCOUNT AMOUNT
-		$discount = ($maxPrice/100)*$amt;
+		$discount = ($amt/100)*$maxPrice;
 
 		//DISTRIBUTE EQUALLY ACROSS ALL ITEMS IN CART
 		$discount = $discount/$itemCount;
