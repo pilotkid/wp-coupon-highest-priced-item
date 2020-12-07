@@ -14,7 +14,7 @@ This plugin allows you to create a coupon that will apply a percentage based cou
 
 There is also a [YouTube Video](https://youtu.be/NRMhDG7-h_shttps://youtu.be/NRMhDG7-h_s) here that describes the full process and demos the plugin
 
-[![WooCommerce Discount Highest Priced Item](http://img.youtube.com/vi/NRMhDG7-h_s/0.jpg)](http://www.youtube.com/watch?v=NRMhDG7-h_s "WooCommerce Discount Highest Priced Item")
+[![WooCommerce Discount for highest priced item](http://img.youtube.com/vi/NRMhDG7-h_s/0.jpg)](http://www.youtube.com/watch?v=NRMhDG7-h_s "WooCommerce Discount")
 
 == Installation ==
 
