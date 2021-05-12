@@ -8,6 +8,7 @@ Stable tag: 4.3
 Tested up to: 5.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 == Description ==
 
 This plugin allows you to create a coupon that will apply a percentage based coupon to the highest priced item in a user's cart.
@@ -15,6 +16,8 @@ This plugin allows you to create a coupon that will apply a percentage based cou
 There is also a [YouTube Video](https://youtu.be/NRMhDG7-h_shttps://youtu.be/NRMhDG7-h_s) here that describes the full process and demos the plugin
 
 [![WooCommerce Discount for highest priced item](http://img.youtube.com/vi/NRMhDG7-h_s/0.jpg)](http://www.youtube.com/watch?v=NRMhDG7-h_s "WooCommerce Discount")
+
+For support please open an issue on [GitHub](https://github.com/pilotkid/wp-coupon-highest-priced-item/issues)
 
 == Installation ==
 
