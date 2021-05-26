@@ -12,23 +12,23 @@ add_action( 'woocommerce_coupon_options', 'mb_wcchpi_add_coupon_text_field', 10,
 function mb_wcchpi_add_coupon_text_field($p, $c) {
     $multiple_products = $c->get_meta('allow_multiple_discounted', false);
     ?>
-    <script>
-        jQuery(document).ready(function(){
-            jQuery('#discount_type').on('change', UpdateFields_MB);
-            UpdateFields_MB();
-        });
+<script>
+jQuery(document).ready(function() {
+    jQuery('#discount_type').on('change', UpdateFields_MB);
+    UpdateFields_MB();
+});
 
-        function UpdateFields_MB(){
-            var selector = ".allow_multiple_discounted";
-            var typeName = jQuery('#discount_type').find(":selected").val();
-            if('mb_wcchpi_most_expensive_coupon' == typeName){
-                jQuery(selector).show(250);
-            }else{
-                jQuery(selector).hide(250);
-            }
-        }
-    </script>
-    <?
+function UpdateFields_MB() {
+    var selector = ".allow_multiple_discounted";
+    var typeName = jQuery('#discount_type').find(":selected").val();
+    if ('mb_wcchpi_most_expensive_coupon' == typeName) {
+        jQuery(selector).show(250);
+    } else {
+        jQuery(selector).hide(250);
+    }
+}
+</script>
+<?
     woocommerce_wp_checkbox( array(
         'id'                => 'allow_multiple_discounted',
         'label'             => __( 'Discount all', 'woocommerce' ),

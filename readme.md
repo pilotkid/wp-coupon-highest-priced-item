@@ -5,7 +5,7 @@ Tags: woocommerce, coupons, discounts
 Requires at least: 5.0
 Requires PHP: 7.0
 Stable tag: 4.3
-Tested up to: 5.5.3
+Tested up to: 5.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,3 +75,6 @@ For support please open an issue on [GitHub](https://github.com/pilotkid/wp-coup
 
 = 1.0.4 =
 * Added apply discount to the entire quantity instead of just one option.
+
+= 1.0.5 =
+* Optimized some slower routines
