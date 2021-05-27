@@ -50,7 +50,7 @@ function mb_wcchpi_cpn_disc(
         // }
 
         //GET ITEMS IN CART THAT ARE GREATER THAN THE DISCOUNT
-        $itemCount = findItemsInCart($discount);
+        $itemCount = findItemsInCart($discount, $multiple_products);
 
         //DISTRIBUTE EQUALLY ACROSS ALL ITEMS IN CART
         $discount = $discount / $itemCount;
@@ -91,7 +91,7 @@ function FindMaxPricedItem($multiple_products)
     ];
 }
 
-function findItemsInCart($discountAmount)
+function findItemsInCart($discountAmount, $multiple_products)
 {
     $items = 0;
     //FIND THE MOST EXPENSIVE ITEM IN THE CART
@@ -103,6 +103,11 @@ function findItemsInCart($discountAmount)
         } else {
             $price = wc_get_price_excluding_tax($cart_item['data']);
         }
+
+        if ($multiple_products == 'yes') {
+            $price *= $cart_item['quantity'];
+        }
+
         if ($price >= $discountAmount) {
             $items += $cart_item['quantity'];
         }
