@@ -81,4 +81,7 @@ For support please open an issue on [GitHub](https://github.com/pilotkid/wp-coup
 * Fixed issue where when the discount is greater than an item price the discount is still correct
 
 = 1.0.6 =
+* Skipped due to numbering issue with 1.0.5 on inital release
+
+= 1.0.7 =
 * Fixed issue with discount all not working
